@@ -25,7 +25,7 @@ fetchBreeds()
   })
   .catch(error => {
     loader.style.display = 'none';
-    // showError();
+    showError();
     Notiflix.Notify.failure(
       'Oops! Something went wrong! Try reloading the page!'
     );
@@ -43,7 +43,7 @@ select.addEventListener('change', function () {
 
       const catData = breeds[0];
       catInfo.innerHTML = `
-        <div><img src="${catData.url}" border ="1px solid black" width ="450"/></div>
+        <div><img src="${catData.url}" border ="2px solid black" width ="450"/></div>
         <div>
         <h2>${catData.breeds[0].name}</h2>
         <p>${catData.breeds[0].description}</p>
