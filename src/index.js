@@ -55,6 +55,7 @@ select.addEventListener('change', function () {
       catInfo.style.gap = '20px';
     })
     .catch(error => {
+      loader.style.display = 'none';
       Notiflix.Notify.failure(
         'Oops! Something went wrong! Try reloading the page!'
       );
